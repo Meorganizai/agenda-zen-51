@@ -51,13 +51,13 @@ const CHECKOUT_URL =
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "OrganizAÍ — Seu assessor financeiro no WhatsApp" },
+      { title: "OrganizAÍ — Seu Organizador financeiro no WhatsApp" },
       {
         name: "description",
         content:
           "Organize suas finanças e sua agenda pelo WhatsApp com IA. Registre por áudio, receba lembretes e sincronize com o Google Agenda. Mais de 5.000 brasileiros já usam.",
       },
-      { property: "og:title", content: "OrganizAÍ — Seu assessor financeiro no WhatsApp" },
+      { property: "og:title", content: "OrganizAÍ — Seu Organizador financeiro no WhatsApp" },
       {
         property: "og:description",
         content:
