@@ -19,7 +19,19 @@ import {
   Clock,
   Wallet,
   TrendingUp,
+  PlayCircle,
 } from "lucide-react";
+import whatsappChat from "@/assets/whatsapp-chat.png.asset.json";
+import dashboardReal from "@/assets/dashboard-real.jpg.asset.json";
+import transactions from "@/assets/transactions.png.asset.json";
+import report from "@/assets/report.png.asset.json";
+import categories from "@/assets/categories.png.asset.json";
+import insights from "@/assets/insights.png.asset.json";
+import charts from "@/assets/charts.png.asset.json";
+import demoLong from "@/assets/demo-long.mp4.asset.json";
+import demoShort from "@/assets/demo-short.mp4.asset.json";
+import demoMid from "@/assets/demo-mid.mp4.asset.json";
+
 
 const CHECKOUT_URL =
   "https://pay.hotmart.com/S105002015T?off=1pic14d0&utm_source=organic";
