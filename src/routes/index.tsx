@@ -190,7 +190,9 @@ function PhoneFrame({ children }: { children: React.ReactNode }) {
   );
 }
 
+function Marquee() {
   const items = [
+
     "+5.000 usuários ativos",
     "Registro por áudio",
     "Sincroniza com Google Agenda",
