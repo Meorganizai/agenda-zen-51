@@ -156,64 +156,40 @@ function Hero() {
 
 function PhoneMockup() {
   return (
-    <div className="relative mx-auto w-full max-w-sm">
-      <div className="absolute -inset-8 -z-10 rounded-full bg-brand/20 blur-3xl" />
-      <div className="rounded-[2.5rem] border border-white/10 bg-surface p-3 shadow-2xl">
-        <div className="rounded-[2rem] bg-[oklch(0.12_0.03_235)] p-4">
-          <div className="flex items-center gap-2 border-b border-white/5 pb-3">
-            <div className="grid h-9 w-9 place-items-center rounded-full bg-brand text-brand-foreground">
-              <MessageCircle className="h-4 w-4" />
-            </div>
-            <div>
-              <p className="text-sm font-semibold">OrganizAÍ</p>
-              <p className="text-[10px] text-brand">online agora</p>
-            </div>
+    <div className="relative mx-auto w-full max-w-[320px]">
+      <div className="absolute -inset-8 -z-10 rounded-full bg-brand/25 blur-3xl" />
+      <PhoneFrame>
+        <img
+          src={whatsappChat.url}
+          alt="Conversa real com o OrganizAÍ no WhatsApp: lembrete de reunião e registro de receita de R$ 5.000"
+          className="block h-full w-full object-cover"
+          loading="eager"
+        />
+      </PhoneFrame>
+
+      <div className="absolute -bottom-6 -left-6 hidden max-w-[220px] rotate-[-4deg] rounded-2xl border border-white/10 bg-[oklch(0.14_0.03_235)]/95 p-3 shadow-2xl backdrop-blur md:block">
+        <div className="flex items-center gap-2">
+          <div className="grid h-7 w-7 place-items-center rounded-full bg-brand text-brand-foreground">
+            <Check className="h-3.5 w-3.5" strokeWidth={3} />
           </div>
-          <div className="mt-4 space-y-2.5 text-sm">
-            <Bubble side="in">Bom dia! Como posso te ajudar hoje?</Bubble>
-            <Bubble side="out">Almoço, 35 reais 🍔</Bubble>
-            <Bubble side="in">
-              Registrado ✅<br />
-              <span className="text-xs opacity-80">Alimentação · R$ 35,00 · hoje</span>
-            </Bubble>
-            <Bubble side="out">🎙️ áudio 0:04</Bubble>
-            <Bubble side="in">
-              Entendi! Recebimento de R$ 1.500 (Freelance) lançado 💚
-            </Bubble>
-            <Bubble side="out">Como tá meu mês?</Bubble>
-            <Bubble side="in">
-              📊 Saldo do mês: <b>+R$ 842</b><br />
-              <span className="text-xs opacity-80">Maior categoria: Alimentação (R$ 612)</span>
-            </Bubble>
-          </div>
-          <div className="mt-4 flex items-center gap-2 rounded-full bg-white/5 px-3 py-2 text-xs text-muted-foreground">
-            <Mic className="h-3.5 w-3.5 text-brand" />
-            Grave um áudio ou digite…
-          </div>
+          <p className="text-xs font-semibold">Registrado em 1 segundo</p>
         </div>
       </div>
     </div>
   );
 }
 
-function Bubble({ side, children }: { side: "in" | "out"; children: React.ReactNode }) {
-  const isOut = side === "out";
+function PhoneFrame({ children }: { children: React.ReactNode }) {
   return (
-    <div className={`flex ${isOut ? "justify-end" : "justify-start"}`}>
-      <div
-        className={`max-w-[85%] rounded-2xl px-3 py-2 leading-snug ${
-          isOut
-            ? "rounded-br-sm bg-brand text-brand-foreground"
-            : "rounded-bl-sm bg-white/10 text-foreground"
-        }`}
-      >
-        {children}
+    <div className="relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-[oklch(0.10_0.02_235)] p-2 shadow-2xl">
+      <div className="relative overflow-hidden rounded-[2rem] bg-black">
+        <div className="absolute left-1/2 top-2 z-10 h-5 w-24 -translate-x-1/2 rounded-full bg-black" />
+        <div className="aspect-[9/19.5] w-full">{children}</div>
       </div>
     </div>
   );
 }
 
-function Marquee() {
   const items = [
     "+5.000 usuários ativos",
     "Registro por áudio",
