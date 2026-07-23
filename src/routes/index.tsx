@@ -63,9 +63,12 @@ function Landing() {
       <Hero />
       <Marquee />
       <HowItWorks />
+      <ProductShowcase />
       <Features />
+      <VideoGallery />
       <CalendarSync />
       <Testimonials />
+
       <Steps />
       <Bonuses />
       <Pricing />
