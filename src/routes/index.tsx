@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   MessageCircle,
   BarChart3,
@@ -87,13 +87,13 @@ function Landing() {
       <HowItWorks />
       <ProductShowcase />
       <Testimonials />
-      <SocialProof />
       <Features />
       <VideoGallery />
       <CalendarSync />
+      <SocialProof />
       <Steps />
-      <Bonuses />
       <Pricing />
+
       <Guarantee />
       <About />
       <FAQ />
@@ -512,36 +512,6 @@ function Steps() {
   );
 }
 
-function Bonuses() {
-  const bonuses = [
-    { icon: Users, title: "Suporte no WhatsApp", body: "Seg à sex, 10h às 17h. Gente de verdade, sem robô." },
-    { icon: Sparkles, title: "Planner de Organização 360°", body: "Organize outras áreas da sua vida além do dinheiro." },
-    { icon: Zap, title: "Aula completa de uso", body: "Tutorial passo a passo pra aproveitar 100% do OrganizAÍ." },
-    { icon: Wallet, title: "E-book Financeiro", body: "Guia prático pra montar seu orçamento sem abrir mão do lazer." },
-    { icon: TrendingUp, title: "Manual da Reputação", body: "Como aumentar seu score bancário e ter acesso a crédito." },
-    { icon: Users, title: "Comunidade VIP", body: "Faça parte de um grupo que tá no mesmo propósito que você." },
-  ];
-  return (
-    <section className="mx-auto max-w-6xl px-4 py-20">
-      <SectionHead
-        eyebrow="Bônus exclusivos"
-        title="Ao entrar hoje, você também leva"
-        subtitle="Um combo pra você organizar não só o financeiro, mas a vida toda."
-      />
-      <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-        {bonuses.map((b) => (
-          <div key={b.title} className="glass rounded-2xl p-6">
-            <div className="grid h-10 w-10 place-items-center rounded-lg bg-accent-gold/20 text-accent-gold">
-              <b.icon className="h-5 w-5" />
-            </div>
-            <h3 className="mt-3 font-semibold">{b.title}</h3>
-            <p className="mt-1 text-sm text-muted-foreground">{b.body}</p>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
-}
 
 function useCountdown(hours: number) {
   const [ms, setMs] = useState(hours * 3600 * 1000);
@@ -751,6 +721,13 @@ function Footer() {
 
 function SocialProof() {
   const shots = [dep1, dep17, dep2, dep18, dep9, dep7, dep12, dep13, dep10, dep20, dep5, dep16, dep3, dep6, dep19, dep4, dep14, dep11, dep8, dep15];
+  const scrollerRef = useRef<HTMLDivElement>(null);
+  const scrollBy = (dir: 1 | -1) => {
+    const el = scrollerRef.current;
+    if (!el) return;
+    const amount = el.clientWidth * 0.9 * dir;
+    el.scrollBy({ left: amount, behavior: "smooth" });
+  };
   return (
     <section id="prova-social" className="mx-auto max-w-6xl px-4 py-20">
       <SectionHead
@@ -758,20 +735,41 @@ function SocialProof() {
         title="O que os brasileiros estão dizendo"
         subtitle="Prints de comentários reais no Instagram — sem edição, sem filtro."
       />
-      <div className="mt-12 columns-1 gap-5 sm:columns-2 lg:columns-3 [&>*]:mb-5 [&>*]:break-inside-avoid">
-        {shots.map((s, i) => (
-          <figure
-            key={i}
-            className="overflow-hidden rounded-2xl border border-white/10 bg-white shadow-lg"
-          >
-            <img
-              src={s.url}
-              alt={`Depoimento de cliente do OrganizAÍ (${i + 1})`}
-              loading="lazy"
-              className="block w-full"
-            />
-          </figure>
-        ))}
+      <div className="relative mt-12">
+        <div
+          ref={scrollerRef}
+          className="flex snap-x snap-mandatory gap-5 overflow-x-auto scroll-smooth pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+        >
+          {shots.map((s, i) => (
+            <figure
+              key={i}
+              className="w-[85%] shrink-0 snap-center overflow-hidden rounded-2xl border border-white/10 bg-white shadow-lg sm:w-[48%] lg:w-[32%]"
+            >
+              <img
+                src={s.url}
+                alt={`Depoimento de cliente do OrganizAÍ (${i + 1})`}
+                loading="lazy"
+                className="block w-full"
+              />
+            </figure>
+          ))}
+        </div>
+        <button
+          type="button"
+          aria-label="Anterior"
+          onClick={() => scrollBy(-1)}
+          className="absolute -left-2 top-1/2 hidden -translate-y-1/2 items-center justify-center rounded-full border border-white/15 bg-background/80 p-2 backdrop-blur hover:bg-background sm:flex"
+        >
+          <ArrowRight className="h-5 w-5 rotate-180" />
+        </button>
+        <button
+          type="button"
+          aria-label="Próximo"
+          onClick={() => scrollBy(1)}
+          className="absolute -right-2 top-1/2 hidden -translate-y-1/2 items-center justify-center rounded-full border border-white/15 bg-background/80 p-2 backdrop-blur hover:bg-background sm:flex"
+        >
+          <ArrowRight className="h-5 w-5" />
+        </button>
       </div>
       <div className="mt-8 flex justify-center">
         <a
@@ -784,6 +782,7 @@ function SocialProof() {
     </section>
   );
 }
+
 
 
 function SectionHead({
