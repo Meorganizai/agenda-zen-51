@@ -746,3 +746,145 @@ function SectionHead({
     </div>
   );
 }
+
+function ProductShowcase() {
+  const shots = [
+    {
+      src: dashboardReal.url,
+      title: "Dashboard no celular",
+      body: "Saldo, receita e gasto do mês num piscar de olhos.",
+    },
+    {
+      src: transactions.url,
+      title: "Transações recentes",
+      body: "Toda entrada e saída categorizada automaticamente pela IA.",
+    },
+    {
+      src: report.url,
+      title: "Relatório mensal completo",
+      body: "Recebe no WhatsApp o fechamento do mês com gráfico por categoria.",
+    },
+  ];
+  return (
+    <section id="painel" className="mx-auto max-w-6xl px-4 py-20">
+      <SectionHead
+        eyebrow="O produto de verdade"
+        title="O que você vai ver dentro do OrganizAÍ"
+        subtitle="Sem mockup, sem enrolação. Estas são telas reais do app usado por milhares de brasileiros."
+      />
+      <div className="mt-12 grid gap-8 md:grid-cols-3">
+        {shots.map((s) => (
+          <div key={s.title} className="flex flex-col items-center text-center">
+            <PhoneFrame>
+              <img
+                src={s.src}
+                alt={s.title}
+                loading="lazy"
+                className="block h-full w-full object-cover object-top"
+              />
+            </PhoneFrame>
+            <h3 className="mt-6 font-display text-lg font-semibold">{s.title}</h3>
+            <p className="mt-1 max-w-xs text-sm text-muted-foreground">{s.body}</p>
+          </div>
+        ))}
+      </div>
+
+      <div className="mt-14 grid gap-5 md:grid-cols-2">
+        <ScreenCard
+          src={insights.url}
+          alt="Insights automáticos do OrganizAÍ mostrando maior categoria e média diária"
+          tag="Insights automáticos"
+          title="A IA te avisa o que precisa de atenção"
+          body="Maior categoria, gasto atípico, média diária e alertas de despesas sem receita — sem você pedir."
+        />
+        <ScreenCard
+          src={charts.url}
+          alt="Gráficos de receitas vs gastos e gastos por categoria"
+          tag="Gráficos"
+          title="Receitas vs gastos, dia a dia"
+          body="Fluxo de caixa e pizza de categorias com a mesma clareza de um app de banco premium."
+        />
+        <ScreenCard
+          src={categories.url}
+          alt="Principais categorias com barras de progresso"
+          tag="Categorias"
+          title="Suas categorias organizadas"
+          body="Cada categoria com seu percentual e histórico. Transporte, alimentação, viagem, o que for."
+          span
+        />
+      </div>
+    </section>
+  );
+}
+
+function ScreenCard({
+  src,
+  alt,
+  tag,
+  title,
+  body,
+  span,
+}: {
+  src: string;
+  alt: string;
+  tag: string;
+  title: string;
+  body: string;
+  span?: boolean;
+}) {
+  return (
+    <div
+      className={`glass overflow-hidden rounded-3xl ${span ? "md:col-span-2" : ""}`}
+    >
+      <div className="grid gap-6 p-6 md:grid-cols-[1fr_1.2fr] md:items-center md:p-8">
+        <div>
+          <span className="inline-flex items-center gap-2 rounded-full bg-brand/15 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-brand">
+            {tag}
+          </span>
+          <h3 className="mt-3 font-display text-xl font-semibold">{title}</h3>
+          <p className="mt-2 text-sm text-muted-foreground">{body}</p>
+        </div>
+        <div className="overflow-hidden rounded-2xl border border-white/10 bg-white shadow-xl">
+          <img src={src} alt={alt} loading="lazy" className="block w-full" />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function VideoGallery() {
+  const clips = [
+    { src: demoLong.url, title: "Registrando um gasto por áudio" },
+    { src: demoMid.url, title: "Consultando o resumo do mês" },
+    { src: demoShort.url, title: "Criando um lembrete" },
+  ];
+  return (
+    <section id="em-acao" className="mx-auto max-w-6xl px-4 py-20">
+      <SectionHead
+        eyebrow="Veja em ação"
+        title="Uma conversa. Zero fricção."
+        subtitle="Gravações reais do OrganizAÍ funcionando no WhatsApp."
+      />
+      <div className="mt-12 grid gap-6 md:grid-cols-3">
+        {clips.map((c) => (
+          <div key={c.title} className="flex flex-col items-center">
+            <PhoneFrame>
+              <video
+                src={c.src}
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="metadata"
+                className="block h-full w-full object-cover"
+              />
+            </PhoneFrame>
+            <p className="mt-4 flex items-center gap-2 text-sm text-muted-foreground">
+              <PlayCircle className="h-4 w-4 text-brand" /> {c.title}
+            </p>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
