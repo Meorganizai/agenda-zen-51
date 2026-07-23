@@ -31,6 +31,18 @@ import charts from "@/assets/charts.png.asset.json";
 import demoLong from "@/assets/demo-long.mp4.asset.json";
 import demoShort from "@/assets/demo-short.mp4.asset.json";
 import demoMid from "@/assets/demo-mid.mp4.asset.json";
+import logo from "@/assets/logo.png.asset.json";
+import dep3 from "@/assets/depoimento3.png.asset.json";
+import dep4 from "@/assets/depoimento4.png.asset.json";
+import dep5 from "@/assets/depoimento5.png.asset.json";
+import dep9 from "@/assets/depoimento9.png.asset.json";
+import dep10 from "@/assets/depoimento10.png.asset.json";
+import dep11 from "@/assets/depoimento11.png.asset.json";
+import dep12 from "@/assets/depoimento12.png.asset.json";
+import dep13 from "@/assets/depoimento13.png.asset.json";
+import dep17 from "@/assets/depoimento17.png.asset.json";
+import dep18 from "@/assets/depoimento18.png.asset.json";
+
 
 
 const CHECKOUT_URL =
@@ -39,13 +51,13 @@ const CHECKOUT_URL =
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "OrganizAÍ — Seu assessor financeiro no WhatsApp" },
+      { title: "OrganizAÍ — Seu Organizador financeiro no WhatsApp" },
       {
         name: "description",
         content:
           "Organize suas finanças e sua agenda pelo WhatsApp com IA. Registre por áudio, receba lembretes e sincronize com o Google Agenda. Mais de 5.000 brasileiros já usam.",
       },
-      { property: "og:title", content: "OrganizAÍ — Seu assessor financeiro no WhatsApp" },
+      { property: "og:title", content: "OrganizAÍ — Seu Organizador financeiro no WhatsApp" },
       {
         property: "og:description",
         content:
@@ -64,11 +76,11 @@ function Landing() {
       <Marquee />
       <HowItWorks />
       <ProductShowcase />
+      <Testimonials />
+      <SocialProof />
       <Features />
       <VideoGallery />
       <CalendarSync />
-      <Testimonials />
-
       <Steps />
       <Bonuses />
       <Pricing />
@@ -85,13 +97,16 @@ function TopBar() {
     <header className="sticky top-0 z-40 border-b border-white/5 glass">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
         <div className="flex items-center gap-2">
-          <div className="grid h-8 w-8 place-items-center rounded-lg bg-brand text-brand-foreground shadow-lg">
-            <MessageCircle className="h-4 w-4" strokeWidth={2.5} />
-          </div>
+          <img
+            src={logo.url}
+            alt="Logo OrganizAÍ"
+            className="h-9 w-9 rounded-lg object-cover shadow-lg"
+          />
           <span className="font-display text-lg font-bold tracking-tight">
             Organiz<span className="text-brand">AÍ</span>
           </span>
         </div>
+
         <nav className="hidden items-center gap-6 text-sm text-muted-foreground md:flex">
           <a href="#como-funciona" className="hover:text-foreground">Como funciona</a>
           <a href="#recursos" className="hover:text-foreground">Recursos</a>
@@ -119,8 +134,9 @@ function Hero() {
             <Sparkles className="h-3.5 w-3.5" /> +5.000 brasileiros no controle
           </span>
           <h1 className="mt-5 font-display text-4xl font-bold leading-[1.05] sm:text-5xl md:text-6xl">
-            <span className="gradient-text">Seu assessor</span> financeiro,
+            <span className="gradient-text">Seu Organizador</span> financeiro,
             direto no WhatsApp.
+
           </h1>
           <p className="mt-5 max-w-xl text-base text-muted-foreground sm:text-lg">
             Registre gastos por áudio, receba lembretes de contas e compromissos
@@ -713,17 +729,52 @@ function Footer() {
     <footer className="mt-10 border-t border-white/5 py-10">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-4 text-xs text-muted-foreground md:flex-row">
         <div className="flex items-center gap-2">
-          <div className="grid h-6 w-6 place-items-center rounded-md bg-brand text-brand-foreground">
-            <MessageCircle className="h-3 w-3" />
-          </div>
+          <img src={logo.url} alt="Logo OrganizAÍ" className="h-6 w-6 rounded-md object-cover" />
           <span className="font-semibold text-foreground">OrganizAÍ</span>
           <span>© {new Date().getFullYear()}</span>
         </div>
-        <p>Seu assessor financeiro no WhatsApp · Feito no Brasil 🇧🇷</p>
+        <p>Seu Organizador financeiro no WhatsApp · Feito no Brasil 🇧🇷</p>
       </div>
     </footer>
   );
 }
+
+function SocialProof() {
+  const shots = [dep17, dep18, dep9, dep12, dep13, dep10, dep5, dep3, dep4, dep11];
+  return (
+    <section id="prova-social" className="mx-auto max-w-6xl px-4 py-20">
+      <SectionHead
+        eyebrow="Comentários reais"
+        title="O que os brasileiros estão dizendo"
+        subtitle="Prints de comentários reais no Instagram — sem edição, sem filtro."
+      />
+      <div className="mt-12 columns-1 gap-5 sm:columns-2 lg:columns-3 [&>*]:mb-5 [&>*]:break-inside-avoid">
+        {shots.map((s, i) => (
+          <figure
+            key={i}
+            className="overflow-hidden rounded-2xl border border-white/10 bg-white shadow-lg"
+          >
+            <img
+              src={s.url}
+              alt={`Depoimento de cliente do OrganizAÍ (${i + 1})`}
+              loading="lazy"
+              className="block w-full"
+            />
+          </figure>
+        ))}
+      </div>
+      <div className="mt-8 flex justify-center">
+        <a
+          href="#oferta"
+          className="btn-primary inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold"
+        >
+          Quero fazer parte também <ArrowRight className="h-4 w-4" />
+        </a>
+      </div>
+    </section>
+  );
+}
+
 
 function SectionHead({
   eyebrow,
