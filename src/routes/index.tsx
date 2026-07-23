@@ -582,7 +582,7 @@ function Pricing() {
           </div>
         </div>
 
-        <div className="relative overflow-hidden rounded-3xl border border-brand/30 bg-gradient-to-b from-[oklch(0.22_0.06_152)] to-[oklch(0.18_0.05_152)] p-6 md:p-8">
+        <div className="relative overflow-hidden rounded-3xl border border-brand/30 bg-gradient-to-b from-[oklch(0.22_0.06_245)] to-[oklch(0.18_0.05_245)] p-6 md:p-8">
           <div className="absolute -right-16 -top-16 h-56 w-56 rounded-full bg-brand/30 blur-3xl" />
           <span className="inline-flex items-center gap-2 rounded-full bg-black/40 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-brand">
             <Sparkles className="h-3.5 w-3.5" /> Oferta por tempo limitado
