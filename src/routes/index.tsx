@@ -45,11 +45,11 @@ export const Route = createFileRoute("/")({
         content:
           "Organize suas finanças e sua agenda pelo WhatsApp com IA. Registre por áudio, receba lembretes e sincronize com o Google Agenda. Mais de 5.000 brasileiros já usam.",
       },
-      { property: "og:title", content: "OrganizAÍ — Finanças e agenda no WhatsApp" },
+      { property: "og:title", content: "OrganizAÍ — Seu assessor financeiro no WhatsApp" },
       {
         property: "og:description",
         content:
-          "Assessor financeiro com IA no WhatsApp. Registre gastos por áudio, painel completo e sincronização com o Google Agenda.",
+          "Organize suas finanças e sua agenda pelo WhatsApp com IA. Registre por áudio, receba lembretes e sincronize com o Google Agenda. Mais de 5.000 brasileiros já usam.",
       },
     ],
   }),
