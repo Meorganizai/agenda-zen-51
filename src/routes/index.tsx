@@ -729,17 +729,52 @@ function Footer() {
     <footer className="mt-10 border-t border-white/5 py-10">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-4 text-xs text-muted-foreground md:flex-row">
         <div className="flex items-center gap-2">
-          <div className="grid h-6 w-6 place-items-center rounded-md bg-brand text-brand-foreground">
-            <MessageCircle className="h-3 w-3" />
-          </div>
+          <img src={logo.url} alt="Logo OrganizAÍ" className="h-6 w-6 rounded-md object-cover" />
           <span className="font-semibold text-foreground">OrganizAÍ</span>
           <span>© {new Date().getFullYear()}</span>
         </div>
-        <p>Seu assessor financeiro no WhatsApp · Feito no Brasil 🇧🇷</p>
+        <p>Seu Organizador financeiro no WhatsApp · Feito no Brasil 🇧🇷</p>
       </div>
     </footer>
   );
 }
+
+function SocialProof() {
+  const shots = [dep17, dep18, dep9, dep12, dep13, dep10, dep5, dep3, dep4, dep11];
+  return (
+    <section id="prova-social" className="mx-auto max-w-6xl px-4 py-20">
+      <SectionHead
+        eyebrow="Comentários reais"
+        title="O que os brasileiros estão dizendo"
+        subtitle="Prints de comentários reais no Instagram — sem edição, sem filtro."
+      />
+      <div className="mt-12 columns-1 gap-5 sm:columns-2 lg:columns-3 [&>*]:mb-5 [&>*]:break-inside-avoid">
+        {shots.map((s, i) => (
+          <figure
+            key={i}
+            className="overflow-hidden rounded-2xl border border-white/10 bg-white shadow-lg"
+          >
+            <img
+              src={s.url}
+              alt={`Depoimento de cliente do OrganizAÍ (${i + 1})`}
+              loading="lazy"
+              className="block w-full"
+            />
+          </figure>
+        ))}
+      </div>
+      <div className="mt-8 flex justify-center">
+        <a
+          href="#oferta"
+          className="btn-primary inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold"
+        >
+          Quero fazer parte também <ArrowRight className="h-4 w-4" />
+        </a>
+      </div>
+    </section>
+  );
+}
+
 
 function SectionHead({
   eyebrow,
