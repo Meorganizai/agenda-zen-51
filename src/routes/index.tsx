@@ -87,13 +87,13 @@ function Landing() {
       <HowItWorks />
       <ProductShowcase />
       <Testimonials />
-      <SocialProof />
       <Features />
       <VideoGallery />
       <CalendarSync />
+      <SocialProof />
       <Steps />
-      <Bonuses />
       <Pricing />
+
       <Guarantee />
       <About />
       <FAQ />
