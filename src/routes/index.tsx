@@ -76,11 +76,11 @@ function Landing() {
       <Marquee />
       <HowItWorks />
       <ProductShowcase />
+      <Testimonials />
+      <SocialProof />
       <Features />
       <VideoGallery />
       <CalendarSync />
-      <Testimonials />
-
       <Steps />
       <Bonuses />
       <Pricing />
@@ -97,13 +97,16 @@ function TopBar() {
     <header className="sticky top-0 z-40 border-b border-white/5 glass">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
         <div className="flex items-center gap-2">
-          <div className="grid h-8 w-8 place-items-center rounded-lg bg-brand text-brand-foreground shadow-lg">
-            <MessageCircle className="h-4 w-4" strokeWidth={2.5} />
-          </div>
+          <img
+            src={logo.url}
+            alt="Logo OrganizAÍ"
+            className="h-9 w-9 rounded-lg object-cover shadow-lg"
+          />
           <span className="font-display text-lg font-bold tracking-tight">
             Organiz<span className="text-brand">AÍ</span>
           </span>
         </div>
+
         <nav className="hidden items-center gap-6 text-sm text-muted-foreground md:flex">
           <a href="#como-funciona" className="hover:text-foreground">Como funciona</a>
           <a href="#recursos" className="hover:text-foreground">Recursos</a>
