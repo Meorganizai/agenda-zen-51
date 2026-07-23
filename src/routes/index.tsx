@@ -42,6 +42,16 @@ import dep12 from "@/assets/depoimento12.png.asset.json";
 import dep13 from "@/assets/depoimento13.png.asset.json";
 import dep17 from "@/assets/depoimento17.png.asset.json";
 import dep18 from "@/assets/depoimento18.png.asset.json";
+import dep1 from "@/assets/depoimento1.png.asset.json";
+import dep2 from "@/assets/depoimento2.png.asset.json";
+import dep6 from "@/assets/depoimento6.png.asset.json";
+import dep7 from "@/assets/depoimento7.png.asset.json";
+import dep8 from "@/assets/depoimento8.png.asset.json";
+import dep14 from "@/assets/depoimento14.png.asset.json";
+import dep15 from "@/assets/depoimento15.png.asset.json";
+import dep16 from "@/assets/depoimento16.png.asset.json";
+import dep19 from "@/assets/depoimento19.png.asset.json";
+import dep20 from "@/assets/depoimento20.png.asset.json";
 
 
 
@@ -740,7 +750,7 @@ function Footer() {
 }
 
 function SocialProof() {
-  const shots = [dep17, dep18, dep9, dep12, dep13, dep10, dep5, dep3, dep4, dep11];
+  const shots = [dep1, dep17, dep2, dep18, dep9, dep7, dep12, dep13, dep10, dep20, dep5, dep16, dep3, dep6, dep19, dep4, dep14, dep11, dep8, dep15];
   return (
     <section id="prova-social" className="mx-auto max-w-6xl px-4 py-20">
       <SectionHead
