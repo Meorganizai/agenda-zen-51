@@ -31,6 +31,18 @@ import charts from "@/assets/charts.png.asset.json";
 import demoLong from "@/assets/demo-long.mp4.asset.json";
 import demoShort from "@/assets/demo-short.mp4.asset.json";
 import demoMid from "@/assets/demo-mid.mp4.asset.json";
+import logo from "@/assets/logo.png.asset.json";
+import dep3 from "@/assets/depoimento3.png.asset.json";
+import dep4 from "@/assets/depoimento4.png.asset.json";
+import dep5 from "@/assets/depoimento5.png.asset.json";
+import dep9 from "@/assets/depoimento9.png.asset.json";
+import dep10 from "@/assets/depoimento10.png.asset.json";
+import dep11 from "@/assets/depoimento11.png.asset.json";
+import dep12 from "@/assets/depoimento12.png.asset.json";
+import dep13 from "@/assets/depoimento13.png.asset.json";
+import dep17 from "@/assets/depoimento17.png.asset.json";
+import dep18 from "@/assets/depoimento18.png.asset.json";
+
 
 
 const CHECKOUT_URL =
