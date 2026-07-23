@@ -512,36 +512,6 @@ function Steps() {
   );
 }
 
-function Bonuses() {
-  const bonuses = [
-    { icon: Users, title: "Suporte no WhatsApp", body: "Seg à sex, 10h às 17h. Gente de verdade, sem robô." },
-    { icon: Sparkles, title: "Planner de Organização 360°", body: "Organize outras áreas da sua vida além do dinheiro." },
-    { icon: Zap, title: "Aula completa de uso", body: "Tutorial passo a passo pra aproveitar 100% do OrganizAÍ." },
-    { icon: Wallet, title: "E-book Financeiro", body: "Guia prático pra montar seu orçamento sem abrir mão do lazer." },
-    { icon: TrendingUp, title: "Manual da Reputação", body: "Como aumentar seu score bancário e ter acesso a crédito." },
-    { icon: Users, title: "Comunidade VIP", body: "Faça parte de um grupo que tá no mesmo propósito que você." },
-  ];
-  return (
-    <section className="mx-auto max-w-6xl px-4 py-20">
-      <SectionHead
-        eyebrow="Bônus exclusivos"
-        title="Ao entrar hoje, você também leva"
-        subtitle="Um combo pra você organizar não só o financeiro, mas a vida toda."
-      />
-      <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-        {bonuses.map((b) => (
-          <div key={b.title} className="glass rounded-2xl p-6">
-            <div className="grid h-10 w-10 place-items-center rounded-lg bg-accent-gold/20 text-accent-gold">
-              <b.icon className="h-5 w-5" />
-            </div>
-            <h3 className="mt-3 font-semibold">{b.title}</h3>
-            <p className="mt-1 text-sm text-muted-foreground">{b.body}</p>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
-}
 
 function useCountdown(hours: number) {
   const [ms, setMs] = useState(hours * 3600 * 1000);
