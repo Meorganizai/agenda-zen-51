@@ -134,8 +134,9 @@ function Hero() {
             <Sparkles className="h-3.5 w-3.5" /> +5.000 brasileiros no controle
           </span>
           <h1 className="mt-5 font-display text-4xl font-bold leading-[1.05] sm:text-5xl md:text-6xl">
-            <span className="gradient-text">Seu assessor</span> financeiro,
+            <span className="gradient-text">Seu Organizador</span> financeiro,
             direto no WhatsApp.
+
           </h1>
           <p className="mt-5 max-w-xl text-base text-muted-foreground sm:text-lg">
             Registre gastos por áudio, receba lembretes de contas e compromissos
