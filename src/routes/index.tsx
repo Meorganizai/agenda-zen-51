@@ -104,7 +104,7 @@ function Landing() {
 
 function TopBar() {
   return (
-    <header className="sticky top-0 z-40 border-b border-white/5 glass">
+    <header className="sticky top-0 z-40 border-b border-border glass">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
         <div className="flex items-center gap-2">
           <img
@@ -162,7 +162,7 @@ function Hero() {
             </a>
             <a
               href="#como-funciona"
-              className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-foreground hover:bg-white/10"
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-border bg-muted/60 px-6 py-3 text-sm font-semibold text-foreground hover:bg-muted"
             >
               Ver como funciona
             </a>
@@ -193,7 +193,7 @@ function PhoneMockup() {
         />
       </PhoneFrame>
 
-      <div className="absolute -bottom-6 -left-6 hidden max-w-[220px] rotate-[-4deg] rounded-2xl border border-white/10 bg-[oklch(0.14_0.03_235)]/95 p-3 shadow-2xl backdrop-blur md:block">
+      <div className="absolute -bottom-6 -left-6 hidden max-w-[220px] rotate-[-4deg] rounded-2xl border border-border bg-card/95 p-3 shadow-2xl backdrop-blur md:block">
         <div className="flex items-center gap-2">
           <div className="grid h-7 w-7 place-items-center rounded-full bg-brand text-brand-foreground">
             <Check className="h-3.5 w-3.5" strokeWidth={3} />
@@ -207,7 +207,7 @@ function PhoneMockup() {
 
 function PhoneFrame({ children }: { children: React.ReactNode }) {
   return (
-    <div className="relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-[oklch(0.10_0.02_235)] p-2 shadow-2xl">
+    <div className="relative overflow-hidden rounded-[2.5rem] border border-border bg-card p-2 shadow-2xl">
       <div className="relative overflow-hidden rounded-[2rem] bg-black">
         <div className="absolute left-1/2 top-2 z-10 h-5 w-24 -translate-x-1/2 rounded-full bg-black" />
         <div className="aspect-[9/19.5] w-full">{children}</div>
@@ -227,7 +227,7 @@ function Marquee() {
     "Cancelamento em 1 clique",
   ];
   return (
-    <div className="border-y border-white/5 bg-white/[0.02] py-4">
+    <div className="border-y border-border bg-muted/40 py-4">
       <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-x-8 gap-y-2 px-4 text-xs text-muted-foreground">
         {items.map((i) => (
           <span key={i} className="inline-flex items-center gap-2">
@@ -271,7 +271,7 @@ function HowItWorks() {
               <div className="grid h-10 w-10 place-items-center rounded-xl bg-brand/15 text-brand">
                 <s.icon className="h-5 w-5" />
               </div>
-              <span className="font-display text-3xl font-bold text-white/20">
+              <span className="font-display text-3xl font-bold text-muted-foreground/40">
                 0{i + 1}
               </span>
             </div>
@@ -344,11 +344,11 @@ function CalendarSync() {
   return (
     <section
       id="agenda"
-      className="relative mx-auto my-10 max-w-6xl overflow-hidden rounded-3xl border border-brand/20 bg-gradient-to-br from-[oklch(0.20_0.05_235)] to-[oklch(0.22_0.08_180)] px-4 py-16 md:px-10"
+      className="relative mx-auto my-10 max-w-6xl overflow-hidden rounded-3xl border border-brand/20 bg-gradient-to-br from-brand/10 to-brand/5 px-4 py-16 md:px-10"
     >
       <div className="grid gap-10 md:grid-cols-2 md:items-center">
         <div>
-          <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs font-semibold">
+          <span className="inline-flex items-center gap-2 rounded-full bg-muted px-3 py-1 text-xs font-semibold">
             <Calendar className="h-3.5 w-3.5" /> Novo · Integração nativa
           </span>
           <h2 className="mt-4 font-display text-3xl font-bold sm:text-4xl">
@@ -384,7 +384,7 @@ function CalendarVisual() {
   const events = [
     { time: "09:00", title: "Reunião cliente", tone: "bg-brand text-brand-foreground" },
     { time: "12:30", title: "Almoço equipe", tone: "bg-accent-gold/90 text-black" },
-    { time: "16:00", title: "Pagar aluguel", tone: "bg-white/10 text-foreground" },
+    { time: "16:00", title: "Pagar aluguel", tone: "bg-muted text-foreground" },
   ];
   return (
     <div className="relative">
@@ -410,7 +410,7 @@ function CalendarVisual() {
             <div
               key={i}
               className={`aspect-square rounded-md text-xs leading-[1.9] ${
-                i === 10 ? "bg-brand text-brand-foreground font-bold" : "bg-white/5 text-muted-foreground"
+                i === 10 ? "bg-brand text-brand-foreground font-bold" : "bg-muted/60 text-muted-foreground"
               }`}
             >
               {i + 1}
@@ -428,14 +428,14 @@ function CalendarVisual() {
         </div>
       </div>
 
-      <div className="absolute -bottom-4 -right-4 w-64 rotate-3 rounded-2xl border border-white/10 bg-[oklch(0.14_0.03_235)] p-3 shadow-2xl">
+      <div className="absolute -bottom-4 -right-4 w-64 rotate-3 rounded-2xl border border-border bg-card p-3 shadow-2xl">
         <div className="flex items-center gap-2">
           <div className="grid h-7 w-7 place-items-center rounded-full bg-brand text-brand-foreground">
             <MessageCircle className="h-3.5 w-3.5" />
           </div>
           <p className="text-xs font-semibold">OrganizAÍ</p>
         </div>
-        <p className="mt-2 rounded-xl rounded-tl-sm bg-white/10 px-3 py-2 text-xs">
+        <p className="mt-2 rounded-xl rounded-tl-sm bg-muted px-3 py-2 text-xs">
           ⏰ Em 30 min: <b>Reunião cliente</b> às 09:00
         </p>
       </div>
@@ -553,27 +553,27 @@ function Pricing() {
       <div className="mt-12 grid gap-6 lg:grid-cols-[1.15fr_1fr]">
         <div className="glass rounded-3xl p-6 md:p-8">
           <p className="text-sm text-muted-foreground">O que está incluso:</p>
-          <ul className="mt-4 divide-y divide-white/5">
+          <ul className="mt-4 divide-y divide-border">
             {rows.map(([label, price]) => (
               <li key={label} className="flex items-center justify-between gap-4 py-3 text-sm">
                 <span className="flex items-center gap-2">
                   <Check className="h-4 w-4 text-brand" /> {label}
                 </span>
-                <span className="text-muted-foreground line-through decoration-white/20">
+                <span className="text-muted-foreground line-through decoration-muted-foreground/50">
                   {price}
                 </span>
               </li>
             ))}
           </ul>
-          <div className="mt-5 flex items-center justify-between border-t border-white/10 pt-4 text-sm">
+          <div className="mt-5 flex items-center justify-between border-t border-border pt-4 text-sm">
             <span className="text-muted-foreground">Valor total</span>
             <span className="font-semibold line-through text-muted-foreground">R$ 702,00</span>
           </div>
         </div>
 
-        <div className="relative overflow-hidden rounded-3xl border border-brand/30 bg-gradient-to-b from-[oklch(0.22_0.06_245)] to-[oklch(0.18_0.05_245)] p-6 md:p-8">
+        <div className="relative overflow-hidden rounded-3xl border border-brand/30 bg-gradient-to-b from-brand/10 to-card p-6 md:p-8">
           <div className="absolute -right-16 -top-16 h-56 w-56 rounded-full bg-brand/30 blur-3xl" />
-          <span className="inline-flex items-center gap-2 rounded-full bg-black/40 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-brand">
+          <span className="inline-flex items-center gap-2 rounded-full bg-brand/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-brand">
             <Sparkles className="h-3.5 w-3.5" /> Oferta por tempo limitado
           </span>
           <h3 className="mt-4 font-display text-2xl font-bold">
@@ -600,7 +600,7 @@ function Pricing() {
             Pagamento seguro via Hotmart · Garantia de 7 dias
           </p>
 
-          <div className="mt-6 rounded-2xl border border-white/10 bg-black/30 p-4">
+          <div className="mt-6 rounded-2xl border border-border bg-muted/60 p-4">
             <p className="flex items-center justify-center gap-2 text-xs text-muted-foreground">
               <Clock className="h-3.5 w-3.5 text-brand" /> Esta oferta expira em
             </p>
@@ -611,7 +611,7 @@ function Pricing() {
                 ["Min", c.m],
                 ["Seg", c.s],
               ].map(([l, v]) => (
-                <div key={l} className="rounded-lg bg-white/5 px-2 py-3">
+                <div key={l} className="rounded-lg bg-muted/60 px-2 py-3">
                   <p className="font-display text-2xl font-bold tabular-nums">{v}</p>
                   <p className="text-[10px] uppercase tracking-wider text-muted-foreground">{l}</p>
                 </div>
@@ -696,7 +696,7 @@ function FaqItem({ q, a }: { q: string; a: string }) {
         <ChevronDown className={`h-4 w-4 shrink-0 text-brand transition-transform ${open ? "rotate-180" : ""}`} />
       </button>
       {open && (
-        <div className="border-t border-white/5 px-5 py-4 text-sm text-muted-foreground">
+        <div className="border-t border-border px-5 py-4 text-sm text-muted-foreground">
           {a}
         </div>
       )}
@@ -706,7 +706,7 @@ function FaqItem({ q, a }: { q: string; a: string }) {
 
 function Footer() {
   return (
-    <footer className="mt-10 border-t border-white/5 py-10">
+    <footer className="mt-10 border-t border-border py-10">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-4 text-xs text-muted-foreground md:flex-row">
         <div className="flex items-center gap-2">
           <img src={logo.url} alt="Logo OrganizAÍ" className="h-6 w-6 rounded-md object-cover" />
@@ -743,7 +743,7 @@ function SocialProof() {
           {shots.map((s, i) => (
             <figure
               key={i}
-              className="w-[85%] shrink-0 snap-center overflow-hidden rounded-2xl border border-white/10 bg-white shadow-lg sm:w-[48%] lg:w-[32%]"
+              className="w-[85%] shrink-0 snap-center overflow-hidden rounded-2xl border border-border bg-white shadow-lg sm:w-[48%] lg:w-[32%]"
             >
               <img
                 src={s.url}
@@ -758,7 +758,7 @@ function SocialProof() {
           type="button"
           aria-label="Anterior"
           onClick={() => scrollBy(-1)}
-          className="absolute -left-2 top-1/2 hidden -translate-y-1/2 items-center justify-center rounded-full border border-white/15 bg-background/80 p-2 backdrop-blur hover:bg-background sm:flex"
+          className="absolute -left-2 top-1/2 hidden -translate-y-1/2 items-center justify-center rounded-full border border-border bg-background/80 p-2 backdrop-blur hover:bg-background sm:flex"
         >
           <ArrowRight className="h-5 w-5 rotate-180" />
         </button>
@@ -766,7 +766,7 @@ function SocialProof() {
           type="button"
           aria-label="Próximo"
           onClick={() => scrollBy(1)}
-          className="absolute -right-2 top-1/2 hidden -translate-y-1/2 items-center justify-center rounded-full border border-white/15 bg-background/80 p-2 backdrop-blur hover:bg-background sm:flex"
+          className="absolute -right-2 top-1/2 hidden -translate-y-1/2 items-center justify-center rounded-full border border-border bg-background/80 p-2 backdrop-blur hover:bg-background sm:flex"
         >
           <ArrowRight className="h-5 w-5" />
         </button>
@@ -904,7 +904,7 @@ function ScreenCard({
           <h3 className="mt-3 font-display text-xl font-semibold">{title}</h3>
           <p className="mt-2 text-sm text-muted-foreground">{body}</p>
         </div>
-        <div className="overflow-hidden rounded-2xl border border-white/10 bg-white shadow-xl">
+        <div className="overflow-hidden rounded-2xl border border-border bg-white shadow-xl">
           <img src={src} alt={alt} loading="lazy" className="block w-full" />
         </div>
       </div>
