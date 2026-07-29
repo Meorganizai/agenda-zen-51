@@ -746,7 +746,7 @@ function SocialProof() {
               className="w-[85%] shrink-0 snap-center overflow-hidden rounded-2xl border border-border bg-white shadow-lg sm:w-[48%] lg:w-[32%]"
             >
               <img
-                src={s.url}
+                src={s}
                 alt={`Depoimento de cliente do OrganizAÍ (${i + 1})`}
                 loading="lazy"
                 className="block w-full"
