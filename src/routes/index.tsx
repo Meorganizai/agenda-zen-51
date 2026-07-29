@@ -21,37 +21,37 @@ import {
   TrendingUp,
   PlayCircle,
 } from "lucide-react";
-import whatsappChat from "@/assets/whatsapp-chat.png.asset.json";
-import dashboardReal from "@/assets/dashboard-real.jpg.asset.json";
-import transactions from "@/assets/transactions.png.asset.json";
-import report from "@/assets/report.png.asset.json";
-import categories from "@/assets/categories.png.asset.json";
-import insights from "@/assets/insights.png.asset.json";
-import charts from "@/assets/charts.png.asset.json";
-import demoLong from "@/assets/demo-long.mp4.asset.json";
-import demoShort from "@/assets/demo-short.mp4.asset.json";
-import demoMid from "@/assets/demo-mid.mp4.asset.json";
-import logo from "@/assets/logo.png.asset.json";
-import dep3 from "@/assets/depoimento3.png.asset.json";
-import dep4 from "@/assets/depoimento4.png.asset.json";
-import dep5 from "@/assets/depoimento5.png.asset.json";
-import dep9 from "@/assets/depoimento9.png.asset.json";
-import dep10 from "@/assets/depoimento10.png.asset.json";
-import dep11 from "@/assets/depoimento11.png.asset.json";
-import dep12 from "@/assets/depoimento12.png.asset.json";
-import dep13 from "@/assets/depoimento13.png.asset.json";
-import dep17 from "@/assets/depoimento17.png.asset.json";
-import dep18 from "@/assets/depoimento18.png.asset.json";
-import dep1 from "@/assets/depoimento1.png.asset.json";
-import dep2 from "@/assets/depoimento2.png.asset.json";
-import dep6 from "@/assets/depoimento6.png.asset.json";
-import dep7 from "@/assets/depoimento7.png.asset.json";
-import dep8 from "@/assets/depoimento8.png.asset.json";
-import dep14 from "@/assets/depoimento14.png.asset.json";
-import dep15 from "@/assets/depoimento15.png.asset.json";
-import dep16 from "@/assets/depoimento16.png.asset.json";
-import dep19 from "@/assets/depoimento19.png.asset.json";
-import dep20 from "@/assets/depoimento20.png.asset.json";
+const whatsappChat = "/whatsapp-chat.png";
+const dashboardReal = "/dashboard-real.jpg";
+const transactions = "/transactions.png";
+const report = "/report.png";
+const categories = "/categories.png";
+const insights = "/insights.png";
+const charts = "/charts.png";
+const demoLong = "/demo-long.mp4";
+const demoShort = "/demo-short.mp4";
+const demoMid = "/demo-mid.mp4";
+const logo = "/logo.png";
+const dep3 = "/depoimento3.png";
+const dep4 = "/depoimento4.png";
+const dep5 = "/depoimento5.png";
+const dep9 = "/depoimento9.png";
+const dep10 = "/depoimento10.png";
+const dep11 = "/depoimento11.png";
+const dep12 = "/depoimento12.png";
+const dep13 = "/depoimento13.png";
+const dep17 = "/depoimento17.png";
+const dep18 = "/depoimento18.png";
+const dep1 = "/depoimento1.png";
+const dep2 = "/depoimento2.png";
+const dep6 = "/depoimento6.png";
+const dep7 = "/depoimento7.png";
+const dep8 = "/depoimento8.png";
+const dep14 = "/depoimento14.png";
+const dep15 = "/depoimento15.png";
+const dep16 = "/depoimento16.png";
+const dep19 = "/depoimento19.png";
+const dep20 = "/depoimento20.png";
 
 
 
@@ -108,7 +108,7 @@ function TopBar() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
         <div className="flex items-center gap-2">
           <img
-            src={logo.url}
+            src={logo}
             alt="Logo OrganizAÍ"
             className="h-9 w-9 rounded-lg object-cover shadow-lg"
           />
@@ -186,7 +186,7 @@ function PhoneMockup() {
       <div className="absolute -inset-8 -z-10 rounded-full bg-brand/25 blur-3xl" />
       <PhoneFrame>
         <img
-          src={whatsappChat.url}
+          src={whatsappChat}
           alt="Conversa real com o OrganizAÍ no WhatsApp: lembrete de reunião e registro de receita de R$ 5.000"
           className="block h-full w-full object-cover"
           loading="eager"
@@ -709,7 +709,7 @@ function Footer() {
     <footer className="mt-10 border-t border-border py-10">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-4 text-xs text-muted-foreground md:flex-row">
         <div className="flex items-center gap-2">
-          <img src={logo.url} alt="Logo OrganizAÍ" className="h-6 w-6 rounded-md object-cover" />
+          <img src={logo} alt="Logo OrganizAÍ" className="h-6 w-6 rounded-md object-cover" />
           <span className="font-semibold text-foreground">OrganizAÍ</span>
           <span>© {new Date().getFullYear()}</span>
         </div>
@@ -810,17 +810,17 @@ function SectionHead({
 function ProductShowcase() {
   const shots = [
     {
-      src: dashboardReal.url,
+      src: dashboardReal,
       title: "Dashboard no celular",
       body: "Saldo, receita e gasto do mês num piscar de olhos.",
     },
     {
-      src: transactions.url,
+      src: transactions,
       title: "Transações recentes",
       body: "Toda entrada e saída categorizada automaticamente pela IA.",
     },
     {
-      src: report.url,
+      src: report,
       title: "Relatório mensal completo",
       body: "Recebe no WhatsApp o fechamento do mês com gráfico por categoria.",
     },
@@ -851,21 +851,21 @@ function ProductShowcase() {
 
       <div className="mt-14 grid gap-5 md:grid-cols-2">
         <ScreenCard
-          src={insights.url}
+          src={insights}
           alt="Insights automáticos do OrganizAÍ mostrando maior categoria e média diária"
           tag="Insights automáticos"
           title="A IA te avisa o que precisa de atenção"
           body="Maior categoria, gasto atípico, média diária e alertas de despesas sem receita — sem você pedir."
         />
         <ScreenCard
-          src={charts.url}
+          src={charts}
           alt="Gráficos de receitas vs gastos e gastos por categoria"
           tag="Gráficos"
           title="Receitas vs gastos, dia a dia"
           body="Fluxo de caixa e pizza de categorias com a mesma clareza de um app de banco premium."
         />
         <ScreenCard
-          src={categories.url}
+          src={categories}
           alt="Principais categorias com barras de progresso"
           tag="Categorias"
           title="Suas categorias organizadas"
@@ -914,9 +914,9 @@ function ScreenCard({
 
 function VideoGallery() {
   const clips = [
-    { src: demoLong.url, title: "Registrando um gasto por áudio" },
-    { src: demoMid.url, title: "Consultando o resumo do mês" },
-    { src: demoShort.url, title: "Criando um lembrete" },
+    { src: demoLong, title: "Registrando um gasto por áudio" },
+    { src: demoMid, title: "Consultando o resumo do mês" },
+    { src: demoShort, title: "Criando um lembrete" },
   ];
   return (
     <section id="em-acao" className="mx-auto max-w-6xl px-4 py-20">
