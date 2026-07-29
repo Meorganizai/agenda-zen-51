@@ -61,19 +61,22 @@ const CHECKOUT_URL =
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "OrganizAÍ — Seu Organizador financeiro no WhatsApp" },
-      {
-        name: "description",
-        content:
-          "Organize suas finanças e sua agenda pelo WhatsApp com IA. Registre por áudio, receba lembretes e sincronize com o Google Agenda. Mais de 5.000 brasileiros já usam.",
-      },
-      { property: "og:title", content: "OrganizAÍ — Seu Organizador financeiro no WhatsApp" },
-      {
-        property: "og:description",
-        content:
-          "Organize suas finanças e sua agenda pelo WhatsApp com IA. Registre por áudio, receba lembretes e sincronize com o Google Agenda. Mais de 5.000 brasileiros já usam.",
-      },
+      { title: "OrganizAí — Seu organizador financeiro no WhatsApp" },
+      { name: "description", content: "Registre gastos por áudio, receba lembretes de contas e compromissos e acompanhe tudo em um painel completo. Sem planilhas. Sem apps complicados." },
+      { property: "og:title", content: "OrganizAí — Seu organizador financeiro no WhatsApp" },
+      { property: "og:description", content: "Registre gastos por áudio, receba lembretes de contas e compromissos e acompanhe tudo em um painel completo. Sem planilhas. Sem apps complicados." },
+      { property: "og:image", content: "https://meorganizaiapp.com.br/og-image.jpg" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:url", content: "https://meorganizaiapp.com.br" },
+      { property: "og:type", content: "website" },
+      { property: "og:locale", content: "pt_BR" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "OrganizAí — Seu organizador financeiro no WhatsApp" },
+      { name: "twitter:description", content: "Registre gastos por áudio, receba lembretes de contas e compromissos e acompanhe tudo em um painel completo. Sem planilhas. Sem apps complicados." },
+      { name: "twitter:image", content: "https://meorganizaiapp.com.br/og-image.jpg" },
     ],
+    links: [{ rel: "canonical", href: "https://meorganizaiapp.com.br" }],
   }),
   component: Landing,
 });

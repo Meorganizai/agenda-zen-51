@@ -86,8 +86,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "description", content: "Organize suas finanças e sua agenda pelo WhatsApp com IA. Registre por áudio, receba lembretes e sincronize com o Google Agenda. Mais de 5.000 brasileiros já usam." },
       { property: "og:description", content: "Organize suas finanças e sua agenda pelo WhatsApp com IA. Registre por áudio, receba lembretes e sincronize com o Google Agenda. Mais de 5.000 brasileiros já usam." },
       { name: "twitter:description", content: "Organize suas finanças e sua agenda pelo WhatsApp com IA. Registre por áudio, receba lembretes e sincronize com o Google Agenda. Mais de 5.000 brasileiros já usam." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/39fc088b-7b19-4ae3-8535-c571af361c55/id-preview-d107cd04--1b131112-cce0-4d2c-9a99-64447705f949.lovable.app-1784830866515.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/39fc088b-7b19-4ae3-8535-c571af361c55/id-preview-d107cd04--1b131112-cce0-4d2c-9a99-64447705f949.lovable.app-1784830866515.png" },
     ],
     links: [
       {
