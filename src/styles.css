@@ -107,7 +107,7 @@
 }
 
 @utility gradient-text {
-  background: linear-gradient(90deg, oklch(0.95 0.02 240), oklch(0.80 0.17 245));
+  background: linear-gradient(90deg, oklch(0.30 0.05 245), oklch(0.62 0.16 245));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
