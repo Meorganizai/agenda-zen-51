@@ -293,7 +293,7 @@ function PrivacyPage() {
             <div className="mt-8 rounded-2xl border border-border bg-surface p-6 text-center">
               <p className="font-display text-lg font-semibold">OrganizAÍ — Seu parceiro para uma vida financeira organizada</p>
               <p className="mt-2 text-sm text-muted-foreground">
-                COPYRIGHT© 2026 — ORGANIZAÍ TECNOLOGIA LTDA — TODOS OS DIREITOS RESERVADOS
+              COPYRIGHT© 2026 — ORGANIZAI SISTEMAS INTELIGENTES LTDA — TODOS OS DIREITOS RESERVADOS
               </p>
               <p className="mt-1 text-sm text-muted-foreground">
                 Dúvidas? Fale conosco pelo e-mail: <a href="mailto:meorganizai@gmail.com" className="text-brand underline hover:no-underline">meorganizai@gmail.com</a>
