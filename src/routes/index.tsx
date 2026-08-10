@@ -716,6 +716,11 @@ function Footer() {
           <span className="font-semibold text-foreground">OrganizAÍ</span>
           <span>© {new Date().getFullYear()}</span>
         </div>
+        <div className="flex flex-wrap items-center justify-center gap-3 md:gap-5">
+          <Link to="/" className="hover:text-brand">Início</Link>
+          <span className="hidden text-border md:inline">·</span>
+          <Link to="/politica-de-privacidade" className="hover:text-brand">Política de Privacidade</Link>
+        </div>
         <p>Seu Organizador financeiro no WhatsApp · Feito no Brasil 🇧🇷</p>
       </div>
     </footer>
