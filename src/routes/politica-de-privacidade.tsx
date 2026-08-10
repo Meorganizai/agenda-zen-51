@@ -347,7 +347,7 @@ function TopBar() {
 
 function Footer() {
   return (
-    <footer className="mt-10 border-t border-border py-10">
+    <footer className="mt-10 border-t border-border pt-10">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-4 text-xs text-muted-foreground md:flex-row">
         <div className="flex items-center gap-2">
           <img src={logo} alt="Logo OrganizAÍ" className="h-6 w-6 rounded-md object-cover" />
@@ -360,6 +360,23 @@ function Footer() {
           <Link to="/politica-de-privacidade" className="hover:text-brand">Política de Privacidade</Link>
         </div>
         <p>Seu Organizador financeiro no WhatsApp · Feito no Brasil</p>
+      </div>
+      <div className="mx-auto mt-8 max-w-6xl border-t border-border px-4 pt-6">
+        <p className="text-center text-[13px] leading-relaxed text-muted-foreground">
+          <span className="font-semibold text-foreground">ORGANIZAI SISTEMAS INTELIGENTES LTDA</span>
+          <br />
+          CNPJ: 61.663.749/0001-03
+          <br />
+          Rua Monsenhor Bruno, 1620 — Aldeota, Fortaleza/CE — CEP 60.115-191
+          <br />
+          <br />
+          Contato: meorganizai@gmail.com · Suporte via WhatsApp: +55 11 91451-4395
+          <br />
+          Segunda a sexta, das 9h às 18h (horário de Brasília)
+          <br />
+          <br />
+          © 2026 ORGANIZAI SISTEMAS INTELIGENTES LTDA — Todos os direitos reservados
+        </p>
       </div>
     </footer>
   );
