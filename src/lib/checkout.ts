@@ -1,6 +1,7 @@
 import { trackPixel } from "./meta-pixel";
 
 const CHECKOUT_BASE = "https://pay.hotmart.com/S105002015T";
+const CHECKOUT_OFFER = "1pic14d0";
 
 const UTM_KEYS = [
   "utm_source",
@@ -36,7 +37,8 @@ export function buildCheckoutUrl(position: string): string {
   }
 
   params.set("sck", sck);
-  return `${CHECKOUT_BASE}?${params.toString()}`;
+  // `off` define o preço no checkout: sempre logo após o "?" e nunca sobrescrito.
+  return `${CHECKOUT_BASE}?off=${CHECKOUT_OFFER}&${params.toString()}`;
 }
 
 export function goToCheckout(position: string) {
