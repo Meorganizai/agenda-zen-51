@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { CheckoutLink } from "@/components/CheckoutLink";
 import { useEffect, useRef, useState } from "react";
 import {
   MessageCircle,
@@ -55,8 +56,6 @@ const dep20 = "/depoimento20.png";
 
 
 
-const CHECKOUT_URL =
-  "https://pay.hotmart.com/S105002015T?off=1pic14d0&utm_source=organic";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -127,12 +126,12 @@ function TopBar() {
           <a href="#oferta" className="hover:text-foreground">Preço</a>
           <a href="#faq" className="hover:text-foreground">FAQ</a>
         </nav>
-        <a
-          href="#oferta"
+        <CheckoutLink
+          position="header"
           className="btn-primary inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold"
         >
           Começar agora <ArrowRight className="h-4 w-4" />
-        </a>
+        </CheckoutLink>
       </div>
     </header>
   );
@@ -157,12 +156,12 @@ function Hero() {
             complicados. Só uma conversa.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <a
-              href="#oferta"
+            <CheckoutLink
+              position="hero"
               className="btn-primary inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold"
             >
               Quero organizar minhas finanças <ArrowRight className="h-4 w-4" />
-            </a>
+            </CheckoutLink>
             <a
               href="#como-funciona"
               className="inline-flex items-center justify-center gap-2 rounded-full border border-border bg-muted/60 px-6 py-3 text-sm font-semibold text-foreground hover:bg-muted"
@@ -591,14 +590,12 @@ function Pricing() {
             <p className="mt-1 text-sm text-muted-foreground">ou 9x de R$ 8,80 no cartão</p>
           </div>
 
-          <a
-            href={CHECKOUT_URL}
-            target="_blank"
-            rel="noreferrer noopener"
+          <CheckoutLink
+            position="preco"
             className="btn-primary mt-6 flex w-full items-center justify-center gap-2 rounded-full px-6 py-4 text-base font-semibold"
           >
             Acesso imediato, sem fidelidade <ArrowRight className="h-5 w-5" />
-          </a>
+          </CheckoutLink>
           <p className="mt-2 text-center text-xs text-muted-foreground">
             Pagamento seguro via Hotmart · Garantia de 7 dias
           </p>
@@ -797,12 +794,12 @@ function SocialProof() {
         </button>
       </div>
       <div className="mt-8 flex justify-center">
-        <a
-          href="#oferta"
+        <CheckoutLink
+          position="prova-social"
           className="btn-primary inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold"
         >
           Quero fazer parte também <ArrowRight className="h-4 w-4" />
-        </a>
+        </CheckoutLink>
       </div>
     </section>
   );
