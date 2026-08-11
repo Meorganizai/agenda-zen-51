@@ -654,12 +654,29 @@ function About() {
         title="Nós somos o OrganizAÍ."
         subtitle="E acreditamos na sua liberdade financeira."
       />
-      <p className="mx-auto mt-6 max-w-2xl text-sm text-muted-foreground">
-        Nascemos de uma inconformidade: por que controlar as finanças precisa
-        ser tão complicado? A tecnologia deve trabalhar para as pessoas — não o
-        contrário. Nossa missão é democratizar a saúde financeira dos
-        brasileiros, usando ferramentas que você já ama, como o WhatsApp.
-      </p>
+      <div className="mx-auto mt-8 max-w-xl">
+        <img
+          src={founders}
+          alt="Paulo e João Pedro, fundadores do OrganizAÍ"
+          className="mx-auto w-full rounded-3xl border border-border bg-card shadow-2xl"
+          loading="lazy"
+        />
+      </div>
+      <div className="mx-auto mt-8 max-w-2xl space-y-4 text-sm text-muted-foreground">
+        <p>
+          Nascemos de uma inconformidade: por que controlar as finanças precisa
+          ser tão complicado? A tecnologia deve trabalhar para as pessoas — não o
+          contrário. Nossa missão é democratizar a saúde financeira dos
+          brasileiros, usando ferramentas que você já ama, como o WhatsApp.
+        </p>
+        <p>
+          Somos um time de apaixonados por tecnologia e finanças, dedicados a criar
+          uma solução que seja não apenas poderosa, mas incrivelmente simples e
+          intuitiva. Para nós, o sucesso é ver você mais tranquilo, realizando seus
+          sonhos e no controle total do seu futuro. Conte com o OrganizAÍ para ser
+          seu parceiro nessa jornada.
+        </p>
+      </div>
     </section>
   );
 }
