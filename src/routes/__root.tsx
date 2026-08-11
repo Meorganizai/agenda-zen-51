@@ -13,7 +13,8 @@ import { useEffect, useRef, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
-import { META_PIXEL_ID, metaPixelBaseScript, trackPixel } from "../lib/meta-pixel";
+import { META_PIXEL_ID } from "../lib/meta-pixel";
+import { MetaPixel } from "../components/MetaPixel";
 
 
 function NotFoundComponent() {
