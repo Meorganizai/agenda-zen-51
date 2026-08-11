@@ -33,6 +33,7 @@ const demoLong = "/demo-long.mp4";
 const demoShort = "/demo-short.mp4";
 const demoMid = "/demo-mid.mp4";
 const logo = "/logo.png";
+const founders = "/founders.jpg";
 const dep3 = "/depoimento3.png";
 const dep4 = "/depoimento4.png";
 const dep5 = "/depoimento5.png";
