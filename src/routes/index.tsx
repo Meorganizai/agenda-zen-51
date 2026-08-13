@@ -451,7 +451,7 @@ function Testimonials() {
     { name: "Camila R.", role: "Empreendedora", body: "Nunca consegui manter uma planilha. No WhatsApp virou hábito em uma semana." },
     { name: "Rafael M.", role: "Autônomo", body: "Registro por áudio no trânsito e no fim do mês tenho tudo categorizado. Absurdo." },
     { name: "Juliana P.", role: "Mãe e CLT", body: "Os lembretes de contas salvaram meu score. Nunca mais paguei nada em atraso." },
-    { name: "Diego A.", role: "Freelancer", body: "Painel lindo e o assessor entende gíria. Vale muito mais que R$67 no ano." },
+    { name: "Diego A.", role: "Freelancer", body: "Painel lindo e o assessor entende gíria. Vale muito mais do que custa no ano." },
     { name: "Fernanda L.", role: "Consultora", body: "Sincronizar com o Google Agenda me economiza pelo menos 3h por semana." },
     { name: "Bruno C.", role: "MEI", body: "Separei conta PF e PJ com categorias. Meu contador agradeceu." },
   ];
