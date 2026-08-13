@@ -586,9 +586,9 @@ function Pricing() {
           <div className="mt-6">
             <p className="text-sm text-muted-foreground">De <span className="line-through">R$ 702</span> por apenas</p>
             <p className="mt-1 font-display text-5xl font-bold leading-none">
-              R$ 67<span className="text-xl text-muted-foreground">/ano</span>
+              R$ 97<span className="text-xl text-muted-foreground">/ano</span>
             </p>
-            <p className="mt-1 text-sm text-muted-foreground">ou 9x de R$ 8,80 no cartão</p>
+            <p className="mt-1 text-sm text-muted-foreground">ou 12x de R$ 10,03 no cartão</p>
           </div>
 
           <CheckoutLink
